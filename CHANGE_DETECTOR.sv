@@ -15,14 +15,14 @@ module CHANGE_DETECTOR(
             register <= 3'd0;
         end
         else begin
-            register <= in;
-            if(in != register)begin
-                change <= 1'b1;
-            end
-            else begin
-                change <= 1'b0;
-            end
-        end  
+                if(in != register) begin
+                        change <= 1'b1;
+                end
+                else begin
+                        change <= 1'b0;
+                end
+        end 
+        register <= in;
     end
     
 endmodule
