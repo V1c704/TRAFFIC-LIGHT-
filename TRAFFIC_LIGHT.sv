@@ -8,7 +8,7 @@ module TRAFFIC_LIGHT(
         output logic red,
         output logic blue
     );
-    
+     
     logic flash;
     logic timer_done;
     logic [3:0] timer_value;
