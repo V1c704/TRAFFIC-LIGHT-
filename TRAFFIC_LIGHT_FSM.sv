@@ -18,7 +18,7 @@ module TRAFFIC_LIGHT_FSM(
     logic [1:0] state, state_next;
     
     
-    always_ff @(posedge clk or posedge rst) begin
+    always_ff @(posedge clk) begin
         if(rst)
             state <= GREEN_STATE;
         else
