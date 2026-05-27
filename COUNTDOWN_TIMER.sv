@@ -10,7 +10,7 @@ module COUNTDOWN_TIMER(
     
     logic [3:0] count;
     
-    always_ff @(posedge clk or posedge rst) begin
+    always_ff @(posedge clk) begin
         if(rst)begin
             count <= 4'b1111;
         end
@@ -19,9 +19,7 @@ module COUNTDOWN_TIMER(
                 count <= timer_value;
             end
             else begin
-                if(count > 0)begin
-                    count <= count - 1;
-                end
+                count <= count - 1;
             end   
         end
     end
